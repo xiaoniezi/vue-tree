@@ -8,7 +8,7 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:9494
 npm run dev
 
 # build for production with minification
@@ -18,4 +18,8 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 简单说明
+elementUI ^2.2.0可以使用scoped slot的方式自定义节点，所以有两种方式，但原理都是一样。
+[展示地址][1]
+
+[1]: https://xiaoniezi.github.io/projects/elementUI_tree

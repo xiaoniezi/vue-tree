@@ -69,13 +69,13 @@ export default{
 				this.$refs['slotTreeInput'+d.id].$refs.input.focus()
 			})
 		},
-		NodeEdit(n, d){//编辑
+		NodeEdit(n, d){//编辑节点
 			console.log(n, d)
 			if(!n.isEdit){//检测isEdit是否存在or是否为false
 				this.$set(n, 'isEdit', true)
 			}
 		},
-		NodeDel(n, d){//删除
+		NodeDel(n, d){//删除节点
 			console.log(n, d)
 			let that = this;
 			if(d.children && d.children.length !== 0){
@@ -105,7 +105,7 @@ export default{
 				d.id > this.non_maxexpandId ? DelFun() : ConfirmFun()
 			}
 		},
-		NodeAdd(n, d){//新增
+		NodeAdd(n, d){//新增节点
 			console.log(n, d)
 			//判断层级
 			if(n.level >= 3){
