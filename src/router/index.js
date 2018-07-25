@@ -1,18 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
-import Tree from '@/components/tree'
+import Tree from '@/view/tree'//old
+import SlotTree from '@/view/slot_tree'
 
 Vue.use(Router)
-Vue.use(ElementUI)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'tree',
-      component: Tree
-    }
-  ]
+  	routes: [{
+  		path: '/',
+  		redirect: '/slot'
+  	},{
+		path: '/render',
+		name: 'RenderTree',
+		component: Tree
+	},{
+		path: '/slot',
+		name: 'SlotTree',
+		component: SlotTree
+	}]
 })

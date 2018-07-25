@@ -17,7 +17,7 @@
 </template>
 <!-- VUE饿了么树形控件添加增删改功能按钮 -->
 <script>
-import TreeRender from '@/components/tree_render'
+import TreeRender from './tree_render'
 import api from '@/resource/api'
 
   export default{
@@ -145,7 +145,7 @@ import api from '@/resource/api'
 <style>
 .expand{
   width:100%;
-  height:100%;
+  height:80%;
   overflow:hidden;
 }
 .expand>div{
