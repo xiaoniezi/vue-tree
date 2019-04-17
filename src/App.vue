@@ -1,46 +1,58 @@
 <template>
     <div id="app">
-        <div class="btn-list">
-            <el-button type="primary" size="small" @click="ChangeTree('RenderTree')">render-content</el-button>
-            <el-button type="primary" size="small" @click="ChangeTree('SlotTree')">scoped slot</el-button>
+        <div class="check-router">
+            <el-radio-group v-model="type" @change="changeRouter">
+                <el-radio-button label="RenderTree">render-content</el-radio-button>
+                <el-radio-button label="SlotTree">scoped slot</el-radio-button>
+            </el-radio-group>
         </div>
-        <router-view/>
+        <router-view />
     </div>
 </template>
 
 <script>
 export default {
     name: 'app',
+    data(){
+        return {
+            type: 'SlotTree'
+        }
+    },
     methods: {
-        ChangeTree(name){
-            this.$router.push({name})
+        changeRouter(name) {
+            this.$router.push({ name: this.type })
         }
     }
 }
 </script>
 
-<style>
-    *{
-      padding:0;
-      margin:0;
-      box-sizing:border-box;
-    }
-    html,body{
-      width:100%;
-      height:100%;
-    }
-    #app {
-      width:100%;
-      height:100%;
-      position:relative;
-      font-family: 'Avenir', Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      /*text-align: center;*/
-      color: #2c3e50;
-    }
-    .btn-list{
-        padding: 1em 0;
-        text-align: center;
-    }
+<style lang="scss">
+* {
+    // padding: 0;
+    // margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*text-align: center;*/
+    color: #2c3e50;
+}
+
+.check-router{
+    padding: 1em 2em;
+}
 </style>
