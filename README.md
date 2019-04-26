@@ -18,7 +18,9 @@ npm run build
 
 ## 简单说明
 elementUI ^2.2.0可以使用scoped slot的方式自定义节点，所以有两种方式，但原理都是一样。
-[展示地址][1]
+
+### 展示地址
+[click here][1]
 
 
 ## 更新说明
@@ -29,4 +31,4 @@ elementUI ^2.2.0可以使用scoped slot的方式自定义节点，所以有两�
 - 删除节点采用组件自带方法`remove`
 - 使用scss
 
-[1]: https://xiaoniezi.github.io/projects/elementUI_tree
+[1]: https://xiaoniezi.github.io/projects/VueTree
